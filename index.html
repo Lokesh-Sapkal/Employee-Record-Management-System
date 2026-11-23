@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Employee Management System</title>
+</head>
+
+<body>
+    <div id="main-head">
+        <header id="header">
+            <h1>Employee Record Management</h1>
+        </header>
+        <select id="role">
+            <option value="emp">Employee</option>
+            <option value="admin">Admin</option>
+        </select>
+    </div>
+    <div class="container">
+        <nav>
+            <ul id="main-nav">
+                <button id="nav1" value="dashboard">Dashboard</button>
+                <button id="nav2" value="database">Database</button>
+            </ul>
+            <button id="themeToggle">Dark Mode</button>
+        </nav>
+
+        <div id="main-body">
+            <h1 id="welcome-msg">Welcome to Employee Management System</h1>
+            <section id="dashboard">
+                <div>
+                    Total Employees :
+                    <span id="emp"></span>
+                </div>
+                <div>
+                    Total Salary spend :
+                    <span id="total-salary"></span>
+                </div>
+                <div>
+                    Senior Employee :
+                    <span id="senior"></span>
+                </div>
+
+                <div>
+                    Junior Employee :
+                    <span id="junior"></span>
+                </div>
+
+                <canvas id="lineChart" height="100"></canvas>
+                <canvas id="pieChart" height="100"></canvas>
+            </section>
+
+            <section id="database">
+                <div id="filter">
+                    <div id="by-category">
+                        <label for="category">Search employee : </label>
+                        <input type="text" id="searchInput">
+                        <button id="search">Search</button>
+                    </div>
+                </div>
+
+                <div id="add">
+                    <div>
+                        <label for="name">Name<span style="color: red;">*</span> : </label>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label for="age">Age<span style="color: red;">*</span> : </label>
+                        <input type="number" id="age">
+                    </div>
+                    <div>
+                        <label for="address">Address<span style="color: red;">*</span> : </label>
+                        <input type="text" id="address">
+                    </div>
+                    <div>
+                        <label for="salary">Salary<span style="color: red;">*</span> : </label>
+                        <input type="number" id="salary">
+                    </div>
+                </div>
+                <span id="error"></span>
+                <div id="addBtn">
+                    <button type="submit" id="submit">Add Employee</button>
+                    <button id="clear">Clear All Data</button>
+                </div>
+
+                <div id="records">
+                </div>
+            </section>
+
+            <section id="login">
+                <h3>Admin Login</h3>
+                <div>
+                    <label for="id">ID : </label>
+                    <input type="text" id="admin-id">
+                </div>
+                <div>
+                    <label for="pass">Password : </label>
+                    <input type="password" id="admin-pass">
+                </div>
+                <div>
+                    <button type="submit" id="sub">Submit</button>
+                    <button id="exit">Exit</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <i>&copy; 2026 Employee Record Management - All Rights Reserved.</i>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
